@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<h1>Verdadero o Falso</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Pregunta</th>
+				<th>Respuesta</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="pregunta : ${preguntas}">
+				<td th:text="${pregunta}"></td>
+				<td><input type="radio" name="respuesta" value="true">
+					Verdadero <input type="radio" name="respuesta" value="false">
+					Falso</td>
+			</tr>
+		</tbody>
+	</table>
+	<a th:href="@{/home}">Volver a inicio</a>
+
+
+</body>
+</html>

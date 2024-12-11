@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<h1>Pregunta</h1>
+
+	<form th:action="@{/quiz/save}" th:object="${question}" method="post">
+		<label for="text">Pregunta:</label> <input type="text" id="text"
+			th:field="*{text}" required> <label for="answer">Respuesta:</label>
+		<select id="answer" th:field="*{answer}">
+			<option value="true">Verdadero</option>
+			<option value="false">Falso</option>
+		</select>
+
+		<button type="submit">Guardar</button>
+	</form>
+	<a th:href="@{/home}">Volver a inicio</a>
+
+</body>
+</html>

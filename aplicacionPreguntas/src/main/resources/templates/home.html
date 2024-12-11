@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1 th:text="${titulo}"></h1>
+		<div class="image-container">
+			<img th:src="@{/img/riddler1.jpg}" alt="Bienvenida"
+				style="max-width: 300px; max-height: 300px;" /> <img
+				th:src="@{/img/riddler2.jpg}" alt="Bienvenida"
+				style="max-width: 295px; max-height: 295px;" />
+		</div>
+		<p th:text="${info}"></p>
+
+		<div class="links">
+			<p>enlaces en construccion</p>
+			<a th:href="@{/quiz/question}">Prototipo Home</a> <a
+				th:href="@{/quiz/trueFalse}">[V]/[F]</a> <a
+				th:href="@{/quiz/single}">Respuesta simple</a>
+		</div>
+
+		<!--	<div class="links">
+			<a th:href="@{/cliente/form}">Nuevo cliente</a>
+			<a th:href="@{/cliente/list}">Lista clientes</a>
+		</div> -->
+	</div>
+
+</body>
+</html>

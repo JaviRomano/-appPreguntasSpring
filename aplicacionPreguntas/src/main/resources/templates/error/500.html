@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+	color: #333;
+	text-align: left;
+	font-size: 7em;
+}
+h2 {
+	color: #320;
+	text-align: left;
+	font-size: 2em;
+}
+
+
+</style>
+<meta charset="UTF-8">
+<title>error 500</title>
+</head>
+<body>
+<h1>Error - 500</h1>
+<h2>Aprende a programar, manco!!</h2>
+<img th:src="@{/img/yamcha.jpg}">
+<div th:text="${error}"></div>
+<div th:text="${status}"></div>
+<div th:text="${timestamp}"></div>
+<div th:text="${trace}"></div>
+
+
+
+</body>
+</html>
