@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-	@Value("Pagina inicial")
+	@Value("Programa Quiz")
 	private String titulo;
-	@Value("examen recuperación 1ª evaluacion")
+	@Value("Menu inicial")
 	private String info;
 
 	@GetMapping({ "/home", "/", "" })

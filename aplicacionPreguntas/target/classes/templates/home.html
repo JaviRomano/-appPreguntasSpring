@@ -12,24 +12,18 @@
 
 		<h1 th:text="${titulo}"></h1>
 		<div class="image-container">
-			<img th:src="@{/img/riddler1.jpg}" alt="Bienvenida"
-				style="max-width: 300px; max-height: 300px;" /> <img
-				th:src="@{/img/riddler2.jpg}" alt="Bienvenida"
-				style="max-width: 295px; max-height: 295px;" />
+		<p>enlaces en construccion</p>
+		<br>
+			<a th:href="@{/quiz/trueFalse}"><img th:src="@{/img/vof.jpg}" alt="Verdadero o Falso"
+				style="max-width: 300px; max-height: 300px;" /> </a>
+			<a th:href="@{/quiz/multi}"><img th:src="@{/img/rm.jpg}" alt="Respuesta Múltiple"
+				style="max-width: 300px; max-height: 300px;" /> </a>
+			<a th:href="@{/quiz/single}"><img th:src="@{/img/ru.jpg}" alt="Respuesta Única"
+				style="max-width: 300px; max-height: 300px;" /> </a>
 		</div>
 		<p th:text="${info}"></p>
 
-		<div class="links">
-			<p>enlaces en construccion</p>
-			<a th:href="@{/quiz/question}">Prototipo Home</a> <a
-				th:href="@{/quiz/trueFalse}">[V]/[F]</a> <a
-				th:href="@{/quiz/single}">Respuesta simple</a>
-		</div>
 
-		<!--	<div class="links">
-			<a th:href="@{/cliente/form}">Nuevo cliente</a>
-			<a th:href="@{/cliente/list}">Lista clientes</a>
-		</div> -->
 	</div>
 
 </body>

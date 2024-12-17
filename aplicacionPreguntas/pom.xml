@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.0</version>
+		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dam</groupId>
 	<artifactId>appPreguntas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>aplicacionPreguntas</name>
-	<description>examen 1 evRecu</description>
+	<description>Aplicación de preguntas para un examen, desarrollada con Spring Boot.</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -72,6 +72,14 @@
 	</dependencies>
 
 	<build>
+	<resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </resource>
+    </resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
