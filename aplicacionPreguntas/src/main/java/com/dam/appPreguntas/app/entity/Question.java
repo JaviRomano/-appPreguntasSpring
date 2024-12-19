@@ -8,13 +8,34 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Question {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private long id;
 	
 	private String text;
-	
 
+	public Question() {
+	}
+	
+	public abstract boolean validateAnswer(String answer);
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+	
 }
